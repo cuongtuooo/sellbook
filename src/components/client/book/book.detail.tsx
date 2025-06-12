@@ -1,5 +1,8 @@
 import { Row, Col, Rate, Divider, App, Breadcrumb } from 'antd';
-import ImageGallery from 'react-image-gallery';
+import ReactImageGallery, { ReactImageGalleryProps } from 'react-image-gallery';
+import { FC } from 'react';
+
+const ImageGallery: FC<ReactImageGalleryProps> = (props) => <ReactImageGallery {...props} />;
 import { useEffect, useRef, useState } from 'react';
 import { MinusOutlined, PlusOutlined } from '@ant-design/icons';
 import { BsCartPlus } from 'react-icons/bs';
