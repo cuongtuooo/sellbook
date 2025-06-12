@@ -1,5 +1,7 @@
 import { Row, Col, Rate, Divider, App, Breadcrumb } from 'antd';
-import ImageGallery from 'react-image-gallery';
+import ReactImageGallery from 'react-image-gallery';
+import type { ReactImageGalleryProps } from 'react-image-gallery';
+const ImageGallery = ReactImageGallery as unknown as React.FC<ReactImageGalleryProps & { ref?: React.Ref<any> }>;
 import { useEffect, useRef, useState } from 'react';
 import { MinusOutlined, PlusOutlined } from '@ant-design/icons';
 import { BsCartPlus } from 'react-icons/bs';
@@ -26,7 +28,7 @@ const BookDetail = (props: IProps) => {
     const [isOpenModalGallery, setIsOpenModalGallery] = useState<boolean>(false);
     const [currentIndex, setCurrentIndex] = useState<number>(0);
 
-    const refGallery = useRef<ImageGallery>(null);
+    const refGallery = useRef<any>(null);
     const [currentQuantity, setCurrentQuantity] = useState<number>(1);
 
     const { setCarts, user } = useCurrentApp();

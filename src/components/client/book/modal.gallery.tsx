@@ -1,6 +1,8 @@
 import { Col, Image, Modal, Row } from "antd";
 import { useEffect, useRef, useState } from "react";
-import ImageGallery from 'react-image-gallery';
+import ReactImageGallery from 'react-image-gallery';
+import type { ReactImageGalleryProps } from 'react-image-gallery';
+const ImageGallery = ReactImageGallery as unknown as React.FC<ReactImageGalleryProps & { ref?: React.Ref<any> }>;
 import 'styles/book.scss';
 
 interface IProps {
@@ -21,7 +23,7 @@ const ModalGallery = (props: IProps) => {
         currentIndex, items, title
     } = props;
     const [activeIndex, setActiveIndex] = useState(0);
-    const refGallery = useRef<ImageGallery>(null);
+    const refGallery = useRef<any>(null);
 
     useEffect(() => {
         if (isOpen) {
