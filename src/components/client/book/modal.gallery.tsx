@@ -1,9 +1,6 @@
 import { Col, Image, Modal, Row } from "antd";
 import { useEffect, useRef, useState } from "react";
-import ReactImageGallery, { ReactImageGalleryProps } from 'react-image-gallery';
-import { FC } from 'react';
-
-const ImageGallery: FC<ReactImageGalleryProps> = (props) => <ReactImageGallery {...props} />;
+import ImageGallery from 'react-image-gallery';
 import 'styles/book.scss';
 
 interface IProps {

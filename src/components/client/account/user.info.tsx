@@ -14,7 +14,6 @@ type FieldType = {
     fullName: string;
     phone: string;
 };
-
 const UserInfo = () => {
     const [form] = Form.useForm();
     const { user, setUser } = useCurrentApp();
